@@ -9,6 +9,11 @@
             "name": "Juti Noppornpitak",
             "email": "jnopporn@shiroyuki.com",
             "role": "Developer"
+        },
+        {
+            "name": "Dean Stalker",
+            "email": "deans@jumbointeractive.com",
+            "role": "Developer"
         }
     ],
     "repositories": [
@@ -27,13 +32,13 @@
     ],
     "require": {
         "php": ">=5.3.6",
-        "twig/twig": "1.*"
+        "twig/twig": "^2.0 | ^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": ">=3.7.x-dev",
         "squizlabs/php_codesniffer": "1.5.0RC2",
-        "instaclick/symfony2-coding-standard": "dev-remaster",
-        "instaclick/object-calisthenics-sniffs": "dev-master",
+        "instaclick/symfony2-coding-standard": "~0.0.2",
+        "instaclick/object-calisthenics-sniffs": "~1.0.0",
         "instaclick/coding-standard": "dev-master"
     },
     "autoload": {

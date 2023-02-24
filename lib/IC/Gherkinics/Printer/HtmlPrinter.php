@@ -4,6 +4,9 @@
  */
 namespace IC\Gherkinics\Printer;
 
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
 /**
  * File Printer
  *
@@ -29,7 +32,7 @@ class HtmlPrinter
     private $outputPath;
 
     /**
-     * @var \Twig_Environment
+     * @var Environment
      */
     private $environment;
 
@@ -51,8 +54,8 @@ class HtmlPrinter
         $this->scannedPath  = $scannedPath;
         $this->resourcePath = $resourcePath;
         $this->outputPath   = $outputPath;
-        $this->environment  = new \Twig_Environment(
-            new \Twig_Loader_Filesystem($loaderPath),
+        $this->environment  = new Environment(
+            new FilesystemLoader($loaderPath),
             $environmentOption
         );
 

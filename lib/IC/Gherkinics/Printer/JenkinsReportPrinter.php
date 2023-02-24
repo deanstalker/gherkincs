@@ -4,6 +4,9 @@
  */
 namespace IC\Gherkinics\Printer;
 
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
 /**
  * Report Printer for Jenkins CI in Checkstyle format
  *
@@ -24,7 +27,7 @@ class JenkinsReportPrinter
     private $outputPath;
 
     /**
-     * @var \Twig_Environment
+     * @var Environment
      */
     private $environment;
 
@@ -44,8 +47,8 @@ class JenkinsReportPrinter
 
         $this->scannedPath  = $scannedPath;
         $this->outputPath   = $outputPath;
-        $this->environment  = new \Twig_Environment(
-            new \Twig_Loader_Filesystem($loaderPath),
+        $this->environment  = new Environment(
+            new FilesystemLoader($loaderPath),
             $environmentOption
         );
 
